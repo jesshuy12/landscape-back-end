@@ -5,4 +5,7 @@ class User < ApplicationRecord
   has_many :skills, through: :user_skills
   has_many :user_types
   has_many :types, through: :user_types
+
+  validates :username, uniqueness: true
+  has_secure_password
 end

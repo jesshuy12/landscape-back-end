@@ -11,10 +11,21 @@ class UsersController < ApplicationController
   end
 
   def create
-    user = User.create(user_params)
-    # create skills here
-    # UserSkills.create(user: user)
-    render json: user
+    user = User.new(
+      name: params[:name],
+      username: params[:username],
+      password: params[:password],
+      location: params[:location],
+      instagram_handle: params[:instagram_handle],
+      follower_count: params[:follower_count],
+      email: params[:email]
+    )
+
+    if user.save
+      render json: user
+    else
+      render json: {errors: user.errors.full_messages}
+    end
   end
 
   def update
@@ -26,7 +37,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.permit(:name, :location, :instagram_handle, :follower_count, :email)
+    params.permit(:name, :username, :password, :location, :instagram_handle, :follower_count, :email)
   end
 
 end
