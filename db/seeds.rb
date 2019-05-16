@@ -6,5 +6,5 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-photographer = Skill.create(name:"Photographer")
-model = Skill.create(name:"Model")
+photographer = Skill.create(name:"Photographer") #1
+model = Skill.create(name:"Model") #2

@@ -10,4 +10,10 @@ class AuthController < ApplicationController
     end
   end
 
+  def auto_login
+    user_id = request.headers["Authorization"]
+    user = User.find(user_id)
+    render json: user
+  end
+
 end
