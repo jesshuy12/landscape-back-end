@@ -12,6 +12,7 @@ class ImagesController < ApplicationController
 
   def create
     image = Image.create(image_params)
+    UserImage.create(image_id: image.id, user_id: params[:user_id])
     render json: image
   end
 

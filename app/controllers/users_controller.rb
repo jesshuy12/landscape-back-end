@@ -20,13 +20,13 @@ class UsersController < ApplicationController
       follower_count: params[:follower_count],
       email: params[:email]
     )
+    user.avatar.attach(params[:avatar])
 
     if user.save
       params[:skill].each do |skill|
         user_skill = Skill.find_by(name: skill)
         UserSkill.create(user_id: user.id, skill_id: user_skill.id)
       end
-      byebug
       render json: user
     else
       render json: {errors: user.errors.full_messages}
