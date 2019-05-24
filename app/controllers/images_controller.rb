@@ -19,7 +19,7 @@ class ImagesController < ApplicationController
   private
 
   def image_params
-    params.permit(:imageURL)
+    params.permit(:imageURL, :height, :width)
   end
 
 end
