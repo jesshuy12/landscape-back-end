@@ -1,24 +1,36 @@
-# README
+## LandScape
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Created by Jessy Hu
 
-Things you may want to cover:
+## About
 
-* Ruby version
+LandScape is an artist collaborator platform in which artists can showcase their portfolio by uploading their art (images) to their profile. All images are stored and hosted on the cloud using Cloudinary. Artists can view other artists profile and see their work. All images include an expand feature in which when an image is clicked, a larger copy of the image is showcased. Authentication was implemented into each user profile for profile protection. Users must sign up with a personal username and password.
 
-* System dependencies
+## Languages
 
-* Configuration
+Frontend - JavaScript with (JSX)
+Backend - Ruby
 
-* Database creation
+## Frameworks
 
-* Database initialization
+Frontend - ReactJS
+Backend - Ruby on Rails API
 
-* How to run the test suite
+## NPMs
 
-* Services (job queues, cache servers, search engines, etc.)
+react-photo-gallery
+react-images
+react-router
 
-* Deployment instructions
+## Cloud Storage
 
-* ...
+Used Cloudinary
+
+## Styling
+
+Framework - Semantic UI React
+Styling is done with a majority using custom CSS. Semantic React UI was used to style buttons and forms.
+
+## Frontend Repo Link
+
+https://github.com/jesshuy12/landscape-front-end
